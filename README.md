@@ -17,6 +17,7 @@ Technologies used for this project:
 	
 ## Content
 Content of the project folder:
+Taras Ermolenko added content.html file
 
 ```
  Top level of project folder: 
