@@ -1,44 +1,22 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>My BCIT Project</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
-
-    <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- Copied from Firebase documentation -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="styles/mainstyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <!-- These two lines are for Auth UI library and CSS -->
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
-    <!-- Copied from MY firebase project-->
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCVCdZ5Zz6hZ62zfPpY0Nmagf2v-hq0mME",
-            authDomain: "mango-e321f.firebaseapp.com",
-            databaseURL: "https://mango-e321f.firebaseio.com",
-            projectId: "mango-e321f",
-            storageBucket: "mango-e321f.appspot.com",
-            messagingSenderId: "286044372674",
-            appId: "1:286044372674:web:9f6437cecf59c998c6055b"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-
+    <title>FORUM</title>
 </head>
 
 <body>
@@ -46,73 +24,46 @@
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="">myApp</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+        <div class="container">
+          <a class="navbar-brand" href="#">Forum Project</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">my data</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profile.html">my profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">login/signup</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Sign In</a>
+              </li>
             </ul>
+          </div>
         </div>
     </nav>
 
-    <!-- Where login widget/component is going to sit -->
+    <!-- Page Content -->
+    <div class="container">
+        <div class="card border-0 shadow my-5">
+          <div class="card-body p-5">
+            <h1 class="font-weight-light">Welcome.</h1>
+            <h2 class="font-weight-light">Please sign in.</h2>
+            <p>New to the Forum? Sign up.</p>
+            
+            <div id="firebaseui-auth-container"></div>
+            <div id="loader">Loading...</div>
+              
+            <div style="height: 700px"></div>
+          </div>
+        </div>
+    </div>
 
     <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome!</h1>
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
-
-    <script>
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-        var uiConfig = {
-            callbacks: {
-                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-                    // User successfully signed in.
-                    // Return type determines whether we continue the redirect automatically
-                    // or whether we leave that to developer to handle.
-                    return true;
-                },
-                uiShown: function () {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
-                }
-            },
-            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-            signInFlow: 'popup',
-            signInSuccessUrl: 'main.html',
-            signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-                //firebase.auth.GithubAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                //firebase.auth.PhoneAuthProvider.PROVIDER_ID
-            ],
-            // Terms of service url.
-            tosUrl: '<your-tos-url>',
-            // Privacy policy url.
-            privacyPolicyUrl: '<your-privacy-policy-url>'
-        };
-
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
+    
+    
+    
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -130,6 +81,18 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    
+    <!-- Firebase libraries from CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+    <!-- Your own Firebase API key information -->
+    <script src="scripts/firebase_api_team06.js"> </script>
+
+    <!-- Your own JavaScript functions included here    -->
+    <script src="scripts/login.js"></script>
 
 </body>
 
