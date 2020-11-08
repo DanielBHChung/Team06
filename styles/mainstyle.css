@@ -14,6 +14,7 @@ body {
   }
   
   #new_dis_btn{
+      width: 60%;
+      margin: auto;
       margin-top: 15px;
-      width: 30%;
   }
