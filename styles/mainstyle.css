@@ -13,3 +13,7 @@ body {
     border-bottom-right-radius: 0.25rem;
   }
   
+  #new_dis_btn{
+      margin-top: 15px;
+      width: 30%;
+  }
