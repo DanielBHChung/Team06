@@ -7,3 +7,7 @@ function readForum() {
         })
 }
 readForum();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 124412c3ca5205076761497d2eb23070e3ed644c

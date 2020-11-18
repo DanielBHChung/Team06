@@ -1,6 +1,7 @@
 /* Set a background image by replacing the URL below */
 body {
-    background: url('https://source.unsplash.com/lc7xcWebECc/1920x1080') no-repeat center center fixed;
+    /* background: #abb6c4; */
+    background: #707172;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -18,3 +19,105 @@ body {
       margin: auto;
       margin-top: 15px;
   }
+
+  #postcomment {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  #btn-group {
+    float: right;
+    display: inline-block;
+  }
+
+  #com-tag {
+    display: inline-block;
+    float: left;
+  }
+
+  #posthead {
+    text-align: left;
+  }
+
+  #upvote{
+    display: inline-block;
+    float: right;
+  }
+
+  #downvote {
+    display: inline-block;
+    float: right;
+  }
+
+  #votecount {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: x-large;
+  }
+
+  #postheader{
+    display: inline-block;
+  }
+
+ #comment {
+  width: 85%;
+  margin: auto;
+ }
+
+ .btn-primary {
+  color: #fff;
+  /* background-color: #173c59;
+  border-color: #173c59; */
+  background-color: #5d8fb1;
+  border-color: #5d8fb1;
+}
+
+.btn-danger {
+  color: #fff;
+  /* background-color: #173c59;
+  border-color: #173c59; */
+  background-color: #5d8fb1;
+  border-color: #5d8fb1;
+}
+
+.btn-success {
+  color: #fff;
+  /* background-color: #173c59;
+  border-color: #173c59; */
+  background-color: #5d8fb1;
+  border-color: #5d8fb1;
+}
+
+#navmain {
+  /* background-color: #3e5572; */
+  background-color: #26272A;
+  color: white;
+}
+
+.btn-outline-success {
+  color: white;
+  border-color: white;
+}
+
+#searchbar {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#commentarea{
+  display: none;
+  width: 70%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#submitpostbtn{
+  margin-top: 25px;
+  width: 100%;
+}
