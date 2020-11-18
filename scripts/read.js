@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
     
     // Your API stuff goes here;  get it from firebase console
@@ -15,7 +16,7 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   // Create the Firestore database object
   // Henceforce, any reference to the database can be made with "db"
-  const db = firebase.firestore();
+
 
  
 db.collection("cities").doc("LA").set({
