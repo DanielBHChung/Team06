@@ -121,3 +121,19 @@ body {
   margin-top: 25px;
   width: 100%;
 }
+
+#forum-posts {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#newforumpostbtn {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+#forumcontentarea {
+  width: 80%;
+  margin: auto;
+}

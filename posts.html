@@ -24,9 +24,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="posts.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="index.html">About</a>
-          <a class="nav-item nav-link" href="login.html">Log In / Sign up</a>
           <a class="nav-item nav-link" href="profile.html">My Profile</a>
         </div>
       </div>
@@ -41,9 +40,9 @@
       </div>
 
   <div id="forumcontentarea">
-    <div class="card text-center">
+    <div class="card text-center" id="forum-posts-main">
       <div class="card-header" id="posthead">
-        <h5 id="postheader"><strong>First Forum Post</strong> <br> By: Post Author</h5>
+        <h5 id="postheader"><strong><a href="main.html">First Forum Post</a></strong> <br> By: Post Author</h5>
         <button type="button" class="btn btn-success" id="upvote">Up</button>
         <p id="votecount">0</p>
         <button type="button" class="btn btn-danger" id="downvote">Down</button>
@@ -69,34 +68,42 @@
       </div>
     </div>
 
-    
-
-    <div id="postcomment">
-    <button onclick="toggleComment()" id="postcommentbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" >
-      Post Comment
-    </button>
-        <div id="commentarea">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <button id="submitpostbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" >Post</button>
-        </div>
-    </div>
-
-    <div id="comment">
-    <div class="card text-center">
+    <div class="card text-center" id="forum-posts"> 
       <div class="card-header" id="posthead">
-        <h5 id="postheader">UserName</h5>
+        <h5 id="postheader"><strong><a href="mainpost2.html">Second Forum Post</a></strong> <br> By: Post Author</h5>
         <button type="button" class="btn btn-success" id="upvote">Up</button>
         <p id="votecount">0</p>
         <button type="button" class="btn btn-danger" id="downvote">Down</button>
       </div>
       <div class="card-body">
-        <p class="card-text">Post Comment</p>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores fugiat possimus vero cupiditate nemo ipsum sed perferendis blanditiis officiis qui dolorem, adipisci eaque ipsam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias voluptas dolores! In, magni vero!</p>
        
-      </div>  
+      </div>
+      <div class="card-footer text-muted">
+        <div>
+          <h5 id="com-tag">Comments</h5>
+          <div class="btn-group" id="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sort By
+            </button>
+            <div class="dropdown-menu" id="dropdown-menu">
+              <a class="dropdown-item" href="#">Hot</a>
+              <a class="dropdown-item" href="#">Latest</a>
+              <a class="dropdown-item" href="#">Oldest</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
   </div>
+
+    <button id="newforumpostbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" >
+      + New Forum Post
+    </button>
+  
+
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
