@@ -1,125 +1,147 @@
 /* Set a background image by replacing the URL below */
 body {
-    /* background: #abb6c4; */
-    background: #707172;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }
+  /* background: #abb6c4; */
+  background: #707172;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 
-  .input-group.md-form.form-sm.form-1 input{
-    border: 1px solid #bdbdbd;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-  }
-  
-  #new_dis_btn{
-      width: 60%;
-      margin: auto;
-      margin-top: 15px;
-  }
+.input-group.md-form.form-sm.form-1 input{
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
 
-  #postcomment {
-    margin-top: 50px;
-    text-align: center;
-    margin-bottom: 25px;
-  }
+#new_dis_btn{
+    width: 60%;
+    margin: auto;
+    margin-top: 15px;
+}
 
-  #btn-group {
-    float: right;
-    display: inline-block;
-  }
+#postcomment {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-  #com-tag {
-    display: inline-block;
-    float: left;
-  }
+#btn-group {
+  float: right;
+  display: inline-block;
+}
 
-  #posthead {
-    text-align: left;
-  }
+#com-tag {
+  display: inline-block;
+  float: left;
+}
 
-  #upvote{
-    display: inline-block;
-    float: right;
-  }
+#posthead {
+  text-align: left;
+}
 
-  #downvote {
-    display: inline-block;
-    float: right;
-  }
+#upvote{
+  display: inline-block;
+  float: right;
+}
 
-  #votecount {
-    display: inline-block;
-    float: right;
-    margin-right: 15px;
-    margin-left: 15px;
-    font-size: x-large;
-  }
+#downvote {
+  display: inline-block;
+  float: right;
+}
 
-  #postheader{
-    display: inline-block;
-  }
+#votecount {
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: x-large;
+}
 
- #comment {
-  width: 85%;
-  margin: auto;
- }
+#postheader{
+  display: inline-block;
+}
 
- .btn-primary {
-  color: #fff;
-  /* background-color: #173c59;
-  border-color: #173c59; */
-  background-color: #5d8fb1;
-  border-color: #5d8fb1;
+#comment {
+width: 85%;
+margin: auto;
+}
+
+.btn-primary {
+color: #fff;
+/* background-color: #173c59;
+border-color: #173c59; */
+background-color: #5d8fb1;
+border-color: #5d8fb1;
 }
 
 .btn-danger {
-  color: #fff;
-  /* background-color: #173c59;
-  border-color: #173c59; */
-  background-color: #5d8fb1;
-  border-color: #5d8fb1;
+color: #fff;
+/* background-color: #173c59;
+border-color: #173c59; */
+background-color: #5d8fb1;
+border-color: #5d8fb1;
 }
 
 .btn-success {
-  color: #fff;
-  /* background-color: #173c59;
-  border-color: #173c59; */
-  background-color: #5d8fb1;
-  border-color: #5d8fb1;
+color: #fff;
+/* background-color: #173c59;
+border-color: #173c59; */
+background-color: #5d8fb1;
+border-color: #5d8fb1;
 }
 
 #navmain {
-  /* background-color: #3e5572; */
-  background-color: #26272A;
-  color: white;
+/* background-color: #3e5572; */
+background-color: #26272A;
+color: white;
 }
 
 .btn-outline-success {
-  color: white;
-  border-color: white;
+color: white;
+border-color: white;
 }
 
 #searchbar {
-  width: 80%;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
+width: 80%;
+margin: auto;
+margin-top: 25px;
+margin-bottom: 25px;
 }
 
 #commentarea{
-  display: none;
-  width: 70%;
-  margin: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
+display: none;
+width: 70%;
+margin: auto;
+margin-top: 25px;
+margin-bottom: 25px;
 }
 
 #submitpostbtn{
-  margin-top: 25px;
-  width: 100%;
+margin-top: 25px;
+width: 100%;
+}
+
+#forum-posts {
+margin-top: 25px;
+margin-bottom: 25px;
+}
+
+#newforumpostbtn {
+width: 40%;
+margin: 0 auto;
+display: block;
+}
+
+#forumcontentarea {
+width: 80%;
+margin: auto;
+}
+
+#forumcontentareacomments {
+width: 80%;
+margin: auto;
+margin-top: 55px;
 }
 
 #account-details {
@@ -128,24 +150,3 @@ body {
 
 .detail-header {
   font-weight: 600;
-#forum-posts {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-#newforumpostbtn {
-  width: 40%;
-  margin: 0 auto;
-  display: block;
-}
-
-#forumcontentarea {
-  width: 80%;
-  margin: auto;
-}
-
-#forumcontentareacomments {
-  width: 80%;
-  margin: auto;
-  margin-top: 55px;
-}
