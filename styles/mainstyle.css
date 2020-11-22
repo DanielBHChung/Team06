@@ -128,4 +128,24 @@ body {
 
 .detail-header {
   font-weight: 600;
+#forum-posts {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#newforumpostbtn {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+#forumcontentarea {
+  width: 80%;
+  margin: auto;
+}
+
+#forumcontentareacomments {
+  width: 80%;
+  margin: auto;
+  margin-top: 55px;
 }

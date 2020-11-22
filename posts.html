@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="styles/mainstyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <title>T&D FORUM</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">T&D Forum</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="index.html">About</a>
+          <a class="nav-item nav-link" href="profile.html">My Profile</a>
+        </div>
+      </div>
+    </nav>
+
+      <div class="input-group md-form form-sm form-1 pl-0" id="searchbar">
+        <div class="input-group-prepend">
+          <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+              aria-hidden="true"></i></span>
+        </div>
+        <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
+      </div>
+
+  <div id="forumcontentarea">
+    <div class="card text-center" id="forum-posts-main">
+      <div class="card-header" id="posthead">
+        <h5 id="postheader"><strong><a href="main.html">First Forum Post</a></strong> <br> By: Post Author</h5>
+        <button type="button" class="btn btn-success" id="upvote">Up</button>
+        <p id="votecount">0</p>
+        <button type="button" class="btn btn-danger" id="downvote">Down</button>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores fugiat possimus vero cupiditate nemo ipsum sed perferendis blanditiis officiis qui dolorem, adipisci eaque ipsam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias voluptas dolores! In, magni vero!</p>
+       
+      </div>
+      <div class="card-footer text-muted">
+        <div>
+          <h5 id="com-tag">Comments</h5>
+          <div class="btn-group" id="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sort By
+            </button>
+            <div class="dropdown-menu" id="dropdown-menu">
+              <a class="dropdown-item" href="#">Hot</a>
+              <a class="dropdown-item" href="#">Latest</a>
+              <a class="dropdown-item" href="#">Oldest</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card text-center" id="forum-posts"> 
+      <div class="card-header" id="posthead">
+        <h5 id="postheader"><strong><a href="mainpost2.html">Second Forum Post</a></strong> <br> By: Post Author</h5>
+        <button type="button" class="btn btn-success" id="upvote">Up</button>
+        <p id="votecount">0</p>
+        <button type="button" class="btn btn-danger" id="downvote">Down</button>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores fugiat possimus vero cupiditate nemo ipsum sed perferendis blanditiis officiis qui dolorem, adipisci eaque ipsam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias voluptas dolores! In, magni vero!</p>
+       
+      </div>
+      <div class="card-footer text-muted">
+        <div>
+          <h5 id="com-tag">Comments</h5>
+          <div class="btn-group" id="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sort By
+            </button>
+            <div class="dropdown-menu" id="dropdown-menu">
+              <a class="dropdown-item" href="#">Hot</a>
+              <a class="dropdown-item" href="#">Latest</a>
+              <a class="dropdown-item" href="#">Oldest</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <button id="newforumpostbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" >
+      + New Forum Post
+    </button>
+  
+
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Firebase libraries from CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    
+
+    <!-- Your own Firebase API key information -->
+    <script src="scripts/firebase_api_team06.js"> </script>
+    <script src="scripts/main.js"> </script>
+    <script src="scripts/app.js"> </script>
+  </body>
+</html>
