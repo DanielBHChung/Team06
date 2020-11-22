@@ -16,3 +16,22 @@ function getUser() {
     })
 }
 getUser();
+
+function getEmail() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            console.log("user is signed in");
+            db.collection("users")
+                .doc(user.uid)
+                .get()
+                .then(function (doc) {
+                    var n = doc.data().email;
+                    console.log(n);
+                    $("#email").text(n);
+                })
+        } else {
+            console.log("no user is signed in");
+        }
+    })
+}
+getEmail();

@@ -121,3 +121,11 @@ body {
   margin-top: 25px;
   width: 100%;
 }
+
+#account-details {
+  margin: 20px;
+}
+
+.detail-header {
+  font-weight: 600;
+}
