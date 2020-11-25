@@ -36,15 +36,25 @@ function getEmail() {
 }
 getEmail();
 
-function readAuthor() {
+function readAuthorJ() {
+    db.collection("users").doc("QBjm2HnHznYUEvfUDZKgmh2WZHm1")
+        .onSnapshot(function (snap) {
+            console.log(snap.data()); //print the document fields of "01"
+            console.log(snap.data().name); //spelled EXACTLY as the firestore
+            document.getElementById("authorJ").innerText = snap.data().name;
+        })
+}
+readAuthorJ();
+
+function readAuthorB() {
     db.collection("users").doc("nHUwKdoEGwdod89TheOiOaRkmQe2")
         .onSnapshot(function (snap) {
             console.log(snap.data()); //print the document fields of "01"
             console.log(snap.data().name); //spelled EXACTLY as the firestore
-            document.getElementById("author").innerText = snap.data().name;
+            document.getElementById("authorB").innerText = snap.data().name;
         })
 }
-readAuthor();
+readAuthorB();
 
 const increment = firebase.firestore.FieldValue.increment(1);
 const decrement = firebase.firestore.FieldValue.increment(-1);
