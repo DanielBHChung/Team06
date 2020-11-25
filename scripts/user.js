@@ -68,3 +68,13 @@ function downvote() {
     });
 }
 downvote();
+
+function readVote() {
+    db.collection("Forum").doc("Post")
+        .onSnapshot(function (snap) {
+            console.log(snap.data()); //print the document fields of "01"
+            console.log(snap.data().votes); //spelled EXACTLY as the firestore
+            document.getElementById("votecount").innerText = snap.data().votes;
+        })
+}
+readVote();

@@ -34,9 +34,13 @@ It has the following subfolders and files:
 ├── images                   # Folder for images
     /blah.jpg                # 
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /firebase-api.js         # Holds the Firebase API and initializes Firebase
+    /login.js                # Initializes the FirebaseUI Widget using Firebase
+    /main.js                 # 
+    /user.js                 # 
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /mainstyle.css           # CSS file, holds all styling elements of the app
+├── bootstrap-4.5.3-dist     # Folder for bootstrap CSS and JS
 
 Firebase hosting files: 
 ├── .firebaserc...
