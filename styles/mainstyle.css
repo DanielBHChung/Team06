@@ -59,12 +59,13 @@ body {
 }
 
 #postheader{
-  display: block;
+  display: inline-block;
 }
 
 #comment {
 width: 85%;
 margin: auto;
+margin-bottom: 25px;
 }
 
 .btn-primary {
@@ -151,10 +152,3 @@ margin-top: 55px;
 .detail-header {
   font-weight: 600;
 }
-  .post-author-read {
-  display: inline-block;
-  }
-
-  .post-header-read{
-    display: block;
-  }

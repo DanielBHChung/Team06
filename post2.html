@@ -74,7 +74,7 @@
     <div id="postcomment">
       <button onclick="toggleComment()" id="postcommentbtn" type="button" class="btn btn-primary" data-toggle="button"
         aria-pressed="false" autocomplete="off">
-        Post Comment
+        Leave Comment
       </button>
       <div id="commentarea">
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -87,9 +87,11 @@
       <div class="card text-center">
         <div class="card-header" id="posthead">
           <h5 id="postheader">UserName</h5>
-          <button type="button" class="btn btn-success" id="upvote">Up</button>
-          <p id="votecount">0</p>
-          <button type="button" class="btn btn-danger" id="downvote">Down</button>
+          <div id="buttonvote-div">
+            <button type="button" class="btn btn-success" id="upvote">Up</button>
+            <p id="votecount">0</p>
+            <button type="button" class="btn btn-danger" id="downvote">Down</button>
+          </div>
         </div>
         <div class="card-body">
           <p class="card-text">Post Comment</p>
