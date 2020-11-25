@@ -18,12 +18,3 @@ var firebaseConfig = {
   const db = firebase.firestore();
 
  
-db.collection("cities").doc("LA").set({
-  name: "Daniel"
-})
-.then(function() {
-  console.log("Document written!");
-})
-.catch(function() {
-  console.log("Error writing document!", error);
-});

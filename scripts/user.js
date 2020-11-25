@@ -36,12 +36,35 @@ function getEmail() {
 }
 getEmail();
 
-function readAuthor(){
+function readAuthor() {
     db.collection("users").doc("nHUwKdoEGwdod89TheOiOaRkmQe2")
-    .onSnapshot(function(snap){
-        console.log(snap.data());   //print the document fields of "01"
-        console.log(snap.data().name);     //spelled EXACTLY as the firestore
-        document.getElementById("author").innerText = snap.data().name;
-    })
+        .onSnapshot(function (snap) {
+            console.log(snap.data()); //print the document fields of "01"
+            console.log(snap.data().name); //spelled EXACTLY as the firestore
+            document.getElementById("author").innerText = snap.data().name;
+        })
 }
 readAuthor();
+
+const increment = firebase.firestore.FieldValue.increment(1);
+const decrement = firebase.firestore.FieldValue.increment(-1);
+
+// Document reference
+const voteRef = db.collection('Forum').doc('Post');
+
+// Update votes count
+function upvote() {
+    document.getElementById("upvote").addEventListener('click', function () {
+        voteRef.update({ votes: increment 
+        });
+    });
+}
+upvote();
+
+function downvote() {
+    document.getElementById("downvote").addEventListener('click', function () {
+        voteRef.update({ votes: decrement 
+        });
+    });
+}
+downvote();

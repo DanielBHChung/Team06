@@ -17,14 +17,17 @@ Technologies used for this project:
 	
 ## Content
 Content of the project folder:
-Daniel Chung added main.html file
-Taras Ermolenko added content.html file
 
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
+├── login.html               # login HTML file, this is where users come to login in/sign up
+├── main.html                # main HTML file, this is the home page of our app
+├── post1.html               # first post HTML file, this is what users see when you come to url
+├── post2.html               # landing HTML file, this is what users see when you come to url
 └── README.md
+
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
