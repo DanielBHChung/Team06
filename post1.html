@@ -98,23 +98,7 @@
 
   </div>
 
-  <script>
-    function userPost(){
-    document.getElementById("submitpostbtn").addEventListener('click', function () {
-        var comments = $("#comments1").val();
-        console.log(comments);
-        $("#comments2").html(comments);
-
-        //
-        db.collection("comments")
-        .add({
-            "comments": comments
-        })
-
-    });
-}
-userPost();
-  </script>
+  
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
