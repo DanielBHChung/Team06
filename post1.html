@@ -41,10 +41,12 @@
     <div class="card text-center">
       <div class="card-header" id="posthead">
         <h5 id="postheader"><strong>First Forum Post</strong> <br> By: Daniel</h5>
-        <button type="button" class="btn btn-success" id="upvote">Up</button>
-        <p id="votecount">0</p>
-        <button type="button" class="btn btn-danger" id="downvote">Down</button>
-      </div>
+        <div id="buttonvote-div">
+          <button type="button" class="btn btn-success" id="upvote">Up</button>
+          <p id="votecount">0</p>
+          <button type="button" class="btn btn-danger" id="downvote">Down</button>
+        </div>
+        </div>
       <div class="card-body">
         <p class="card-text">THIS IS FORUM POST CONTENT</p>
 
@@ -72,12 +74,12 @@
     <div id="postcomment">
       <button onclick="toggleComment()" id="postcommentbtn" type="button" class="btn btn-primary" data-toggle="button"
         aria-pressed="false" autocomplete="off">
-        TOGGLE COMMENT TEXT AREA BUTTON
+        Leave Comment
       </button>
       <div id="commentarea">
         <textarea type="text" id="comments1" class="form-control"  rows="3"></textarea>
         <button id="submitpostbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false"
-        autocomplete="off">SUBMIT POST</button>
+        autocomplete="off">SUBMIT</button>
       </div>
     </div>
 
@@ -85,9 +87,11 @@
       <div class="card text-center">
         <div class="card-header" id="posthead">
           <h5 id="postheader">UserName</h5>
-          <button type="button" class="btn btn-success" id="upvote">Up</button>
-          <p id="votecount">0</p>
-          <button type="button" class="btn btn-danger" id="downvote">Down</button>
+          <div id="buttonvote-div">
+            <button type="button" class="btn btn-success" id="upvote">Up</button>
+            <p id="votecount">0</p>
+            <button type="button" class="btn btn-danger" id="downvote">Down</button>
+         </div>
         </div>
         <div class="card-body">
           <p id="comments2"> stuff </p>
