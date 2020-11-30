@@ -12,12 +12,16 @@ function userPost() {
     firebase.auth().onAuthStateChanged(function (user) {
       var comments = $("#comments1").val();
       var votes = 0;
+      var name = user.displayName;
       console.log(comments);
+      console.log(votes);
 
       //adds comment to database
       db.collection("comments")
         .add({
-          "comments": comments
+          "comments": comments,
+          "votes": votes,
+          "name": name
         })
       
       //clears textfield after submission
@@ -37,11 +41,12 @@ function getComment() {
                 console.log(doc.data());
                 var comment = doc.data().comments;
                 var vote = doc.data().votes;
+                var name = doc.data().name;
                 var d1 = $("#comment-here").append(
                     "<div id='comment'>"
                     +   "<div class='card text-center'>"
                     +       "<div class='card-header' id='posthead'>"
-                    +           "<h5 id='postheader'>UserName</h5>"
+                    +           "<h5 id='postheader'>" + name + "</h5>"
                     +           "<div id='buttonvote-div'>"
                     +               "<button type='button' class='btn btn-success' id='upvote'><i class='far fa-thumbs-up'></i></button>"
                     +               "<p id='votecount'>" + vote + "</p>"
