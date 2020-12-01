@@ -45,12 +45,48 @@ body {
   float: right;
 }
 
+#upvote1{
+  display: inline-block;
+  float: right;
+}
+
+#upvote2{
+  display: inline-block;
+  float: right;
+}
+
 #downvote {
   display: inline-block;
   float: right;
 }
 
+#downvote1 {
+  display: inline-block;
+  float: right;
+}
+
+#downvote2 {
+  display: inline-block;
+  float: right;
+}
+
 #votecount {
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: x-large;
+}
+
+#votecount1 {
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: x-large;
+}
+
+#votecount2 {
   display: inline-block;
   float: right;
   margin-right: 15px;

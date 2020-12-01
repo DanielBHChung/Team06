@@ -1,3 +1,36 @@
+const increment2 = firebase.firestore.FieldValue.increment(1);
+const decrement2 = firebase.firestore.FieldValue.increment(-1);
+
+// Document reference
+const voteRef2 = db.collection('Forum').doc('Post 2');
+
+// Update votes count
+function upvote() {
+    document.getElementById("upvote2").addEventListener('click', function () {
+        voteRef2.update({ Votes: increment2 
+        });
+    });
+}
+upvote();
+
+function downvote() {
+    document.getElementById("downvote2").addEventListener('click', function () {
+        voteRef2.update({ Votes: decrement2 
+        });
+    });
+}
+downvote();
+
+function readAuthor2() {
+  db.collection("users").doc("nHUwKdoEGwdod89TheOiOaRkmQe2")
+      .onSnapshot(function (snap) {
+          console.log(snap.data()); //print the document fields of "01"
+          console.log(snap.data().name); //spelled EXACTLY as the firestore
+          document.getElementById("author2").innerText = snap.data().name;
+      })
+}
+readAuthor2();
+
 function toggleComment() {
   var x = document.getElementById("commentarea");
   if (x.style.display === "none") {
@@ -7,14 +40,25 @@ function toggleComment() {
   }
 }
 
+function readVote1() {
+    db.collection("Forum").doc("Post 2")
+        .onSnapshot(function (snap) {
+            console.log(snap.data()); //print the document fields of "01"
+            console.log(snap.data().Votes); //spelled EXACTLY as the firestore
+            document.getElementById("votecount2").innerText = snap.data().Votes;
+        })
+}
+readVote1();
+
 function userPost() {
   document.getElementById("submitpostbtn").addEventListener('click', function () {
     firebase.auth().onAuthStateChanged(function (user) {
-      var comments = $("#comments1").val();
+      var comments = $("#comments2").val();
       var votes = 0;
       var name = user.displayName;
       console.log(comments);
       console.log(votes);
+      console.log(name);
 
       //adds comment to database
       db.collection('Forum').doc('Post 2').collection('Comments')

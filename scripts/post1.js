@@ -1,3 +1,46 @@
+const increment1 = firebase.firestore.FieldValue.increment(1);
+const decrement1 = firebase.firestore.FieldValue.increment(-1);
+
+// Document reference
+const voteRef1 = db.collection('Forum').doc('Post 1');
+
+// Update votes count
+function upvote() {
+    document.getElementById("upvote1").addEventListener('click', function () {
+        voteRef1.update({ Votes: increment1
+        });
+    });
+}
+upvote();
+
+function downvote() {
+    document.getElementById("downvote1").addEventListener('click', function () {
+        voteRef1.update({ Votes: decrement1 
+        });
+    });
+}
+downvote();
+
+function readVote1() {
+    db.collection("Forum").doc("Post 1")
+        .onSnapshot(function (snap) {
+            console.log(snap.data()); //print the document fields of "01"
+            console.log(snap.data().Votes); //spelled EXACTLY as the firestore
+            document.getElementById("votecount1").innerText = snap.data().Votes;
+        })
+}
+readVote1();
+
+function readAuthor1() {
+  db.collection("users").doc("QBjm2HnHznYUEvfUDZKgmh2WZHm1")
+      .onSnapshot(function (snap) {
+          console.log(snap.data()); //print the document fields of "01"
+          console.log(snap.data().name); //spelled EXACTLY as the firestore
+          document.getElementById("author1").innerText = snap.data().name;
+      })
+}
+readAuthor1();
+
 function toggleComment() {
   var x = document.getElementById("commentarea");
   if (x.style.display === "none") {

@@ -24,20 +24,19 @@ Content of the project folder:
 ├── index.html               # landing HTML file, this is what users see when you come to url
 ├── login.html               # login HTML file, this is where users come to login in/sign up
 ├── main.html                # main HTML file, this is the home page of our app
-├── post1.html               # first post HTML file, this is what users see when you come to url
-├── post2.html               # landing HTML file, this is what users see when you come to url
+├── post1.html               # first post HTML file
+├── post2.html               # second post HTML file
 └── README.md
 
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
 ├── scripts                  # Folder for scripts
     /firebase-api.js         # Holds the Firebase API and initializes Firebase
     /login.js                # Initializes the FirebaseUI Widget using Firebase
-    /main.js                 # 
-    /user.js                 # 
+    /post1.js                # Holds all JS for the first post
+    /post2.js                # Holds all JS for the second post
+    /user.js                 # Holds the account information
 ├── styles                   # Folder for styles
     /mainstyle.css           # CSS file, holds all styling elements of the app
 ├── bootstrap-4.5.3-dist     # Folder for bootstrap CSS and JS
