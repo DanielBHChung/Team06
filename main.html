@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+  <!-- Header Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">T&D Forum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -35,6 +35,7 @@
     </div>
   </nav>
 
+  <!-- Search Bar -->
   <div class="input-group md-form form-sm form-1 pl-0" id="searchbar">
     <div class="input-group-prepend">
       <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
@@ -43,6 +44,7 @@
     <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
   </div>
 
+  <!-- First post content -->
   <div id="forumcontentarea">
     <div class="card text-center" id="forum-posts-main">
       <div class="card-header" id="posthead">
@@ -55,8 +57,8 @@
         </div>
       </div>
       <div class="card-body">
-        <p class="card-text">Has anyone been to the sushi restaurant that recently opened on 2nd Ave? I want to check it out but the wait times seem really long.</p>
-
+        <p class="card-text">Has anyone been to the sushi restaurant that recently opened on 2nd Ave? I want to check it
+          out but the wait times seem really long.</p>
       </div>
       <div class="card-footer text-muted">
         <div>
@@ -76,19 +78,19 @@
       </div>
     </div>
 
+    <!-- Second post content -->
     <div class="card text-center" id="forum-posts">
       <div class="card-header" id="posthead">
         <h5 id="postheader"><strong><a href="post2.html">Second Forum Post</a></strong></h5>
         <h5 id="author2" class="post-author-read"></h5>
         <div id="buttonvote-div">
-            <button type="button" class="btn btn-danger" id="downvote2"><i class="far fa-thumbs-down"></i></button>
-            <p id="votecount2">0</p>
-            <button type="button" class="btn btn-success" id="upvote2"><i class="far fa-thumbs-up"></i></button>
+          <button type="button" class="btn btn-danger" id="downvote2"><i class="far fa-thumbs-down"></i></button>
+          <p id="votecount2">0</p>
+          <button type="button" class="btn btn-success" id="upvote2"><i class="far fa-thumbs-up"></i></button>
         </div>
       </div>
       <div class="card-body">
         <p class="card-text">Does anyone know what time NPC Gaming at Metrotown closes on Fridays?</p>
-
       </div>
       <div class="card-footer text-muted">
         <div>
@@ -107,15 +109,15 @@
         </div>
       </div>
     </div>
-
   </div>
 
+  <!-- New post button -->
   <button id="newforumpostbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false"
     autocomplete="off">
     + New Forum Post
   </button>
 
-  <!-- Modal -->
+  <!-- Modal holding account information-->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">

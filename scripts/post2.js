@@ -4,7 +4,7 @@ const decrement2 = firebase.firestore.FieldValue.increment(-1);
 // Document reference
 const voteRef2 = db.collection('Forum').doc('Post 2');
 
-// Update votes count
+// Update vote count (by incrementing)
 function upvote() {
     document.getElementById("upvote2").addEventListener('click', function () {
         voteRef2.update({ Votes: increment2 
@@ -13,6 +13,7 @@ function upvote() {
 }
 upvote();
 
+// Update vote count (by decrementing)
 function downvote() {
     document.getElementById("downvote2").addEventListener('click', function () {
         voteRef2.update({ Votes: decrement2 
@@ -21,25 +22,7 @@ function downvote() {
 }
 downvote();
 
-function readAuthor2() {
-  db.collection("users").doc("nHUwKdoEGwdod89TheOiOaRkmQe2")
-      .onSnapshot(function (snap) {
-          console.log(snap.data()); //print the document fields of "01"
-          console.log(snap.data().name); //spelled EXACTLY as the firestore
-          document.getElementById("author2").innerText = snap.data().name;
-      })
-}
-readAuthor2();
-
-function toggleComment() {
-  var x = document.getElementById("commentarea");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
+// Read vote count
 function readVote1() {
     db.collection("Forum").doc("Post 2")
         .onSnapshot(function (snap) {
@@ -50,6 +33,28 @@ function readVote1() {
 }
 readVote1();
 
+// Read author of post
+function readAuthor2() {
+  db.collection("users").doc("nHUwKdoEGwdod89TheOiOaRkmQe2")
+      .onSnapshot(function (snap) {
+          console.log(snap.data()); //print the document fields of "01"
+          console.log(snap.data().name); //spelled EXACTLY as the firestore
+          document.getElementById("author2").innerText = snap.data().name;
+      })
+}
+readAuthor2();
+
+// Toggle comment box
+function toggleComment() {
+  var x = document.getElementById("commentarea");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// Writes post content to database
 function userPost() {
   document.getElementById("submitpostbtn").addEventListener('click', function () {
     firebase.auth().onAuthStateChanged(function (user) {
@@ -76,7 +81,7 @@ function userPost() {
 }
 userPost();
 
-
+// Reads post content, author's name and vote count from database
 function getComment() {
     db.collection('Forum').doc('Post 2').collection('Comments')
         .get()
@@ -107,4 +112,3 @@ function getComment() {
   })
 }
 getComment();
-

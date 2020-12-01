@@ -1,3 +1,4 @@
+// Reads user name from database
 function getUser() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -17,6 +18,7 @@ function getUser() {
 }
 getUser();
 
+// Reads user email from database
 function getEmail() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {

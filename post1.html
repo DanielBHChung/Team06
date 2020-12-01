@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+  <!-- Header Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">T&D Forum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -35,6 +35,7 @@
     </div>
   </nav>
 
+  <!-- Post content -->
   <div id="forumcontentareacomments">
     <div class="card text-center">
       <div class="card-header" id="posthead">
@@ -45,10 +46,10 @@
           <p id="votecount1">0</p>
           <button type="button" class="btn btn-success" id="upvote1"><i class="far fa-thumbs-up"></i></button>
         </div>
-        </div>
+      </div>
       <div class="card-body">
-        <p class="card-text">Has anyone been to the sushi restaurant that recently opened on 2nd Ave? I want to check it out but the wait times seem really long.</p>
-
+        <p class="card-text">Has anyone been to the sushi restaurant that recently opened on 2nd Ave? I want to check it
+          out but the wait times seem really long.</p>
       </div>
       <div class="card-footer text-muted">
         <div>
@@ -68,23 +69,25 @@
       </div>
     </div>
 
+    <!-- Comment box -->
     <div id="postcomment">
       <button onclick="toggleComment()" id="postcommentbtn" type="button" class="btn btn-primary" data-toggle="button"
         aria-pressed="false" autocomplete="off">
         Leave Comment
       </button>
       <div id="commentarea">
-        <textarea type="text" id="comments1" class="form-control"  rows="3"></textarea>
+        <textarea type="text" id="comments1" class="form-control" rows="3"></textarea>
         <button id="submitpostbtn" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false"
-        autocomplete="off">SUBMIT</button>
+          autocomplete="off">SUBMIT</button>
       </div>
     </div>
 
+    <!-- This is where the comments will be dynamically displayed -->
     <div id="comment-here"></div>
 
   </div>
 
-  <!-- Modal -->
+  <!-- Modal holding account information-->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">

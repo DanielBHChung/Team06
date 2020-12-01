@@ -1,6 +1,6 @@
 var firebaseConfig = {
     
-    // Your API stuff goes here;  get it from firebase console
+    // Firebase API
     apiKey: "AIzaSyBPdRo8e0nKToihUg2Ks19YXBlReTPCXrE",
     authDomain: "forum-be3b8.firebaseapp.com",
     databaseURL: "https://forum-be3b8.firebaseio.com",
