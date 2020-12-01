@@ -80,7 +80,7 @@ function downvote() {
 downvote();
 
 function readVote() {
-    db.collection("Forum").doc("Post")
+    db.collection("Forum").doc("Post 1")
         .onSnapshot(function (snap) {
             console.log(snap.data()); //print the document fields of "01"
             console.log(snap.data().votes); //spelled EXACTLY as the firestore

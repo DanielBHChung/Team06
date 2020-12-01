@@ -17,7 +17,7 @@ function userPost() {
       console.log(votes);
 
       //adds comment to database
-      db.collection("comments")
+      db.collection('Forum').doc('Post 2').collection('Comments')
         .add({
           "comments": comments,
           "votes": votes,
@@ -34,7 +34,7 @@ userPost();
 
 
 function getComment() {
-    db.collection("comments")
+    db.collection('Forum').doc('Post 2').collection('Comments')
         .get()
         .then(function(snap) {
             snap.forEach(function(doc) {
@@ -48,9 +48,9 @@ function getComment() {
                     +       "<div class='card-header' id='posthead'>"
                     +           "<h5 id='postheader'>" + name + "</h5>"
                     +           "<div id='buttonvote-div'>"
-                    +               "<button type='button' class='btn btn-success' id='upvote'><i class='far fa-thumbs-up'></i></button>"
-                    +               "<p id='votecount'>" + vote + "</p>"
                     +               "<button type='button' class='btn btn-danger' id='downvote'><i class='far fa-thumbs-down'></i></button>"
+                    +               "<p id='votecount'>" + vote + "</p>"
+                    +               "<button type='button' class='btn btn-success' id='upvote'><i class='far fa-thumbs-up'></i></button>"
                     +           "</div>"
                     +       "</div>"
                     +       "<div class='card-body'>"
